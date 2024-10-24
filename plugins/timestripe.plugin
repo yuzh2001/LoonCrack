@@ -1,0 +1,25 @@
+#!name= 【破】timestripe
+#!desc= 解锁timestripe
+#!author= paden
+#!homepage= https://github.com/yuzh2001/LoonCrack
+#!system = iOS,iPadOS,tvOS,macOS
+#!system_version = 15
+#!loon_version = 3.2.1(372)
+#!tag = 破解
+
+[Argument]
+
+[General]
+
+[rule]
+
+[rewrite]
+https:\/\/timestripe\.com\/api\/v2\/spaces\/[^$] response-body-json-replace level {"name":"Pro","isPro":true,"canUseHorizons":true,"canUseDarkMode":true,"canUseClimbs":true,"canUseColors":true,"canUseApp":true,"canStartTrial":false,"trialLengthDays":7,"goalsLimit":1001,"climbsLimit":1001,"boardsLimit":1001,"bucketsLimit":1001,"bucketGoalsLimit":1000,"fileSizeLimit":10485760,"paywallVariant":"v1"}
+https:\/\/timestripe\.com\/api\/v2\/spaces\/$ response-body-json-replace [0].level {"name":"Pro","isPro":true,"canUseHorizons":true,"canUseDarkMode":true,"canUseClimbs":true,"canUseColors":true,"canUseApp":true,"canStartTrial":false,"trialLengthDays":7,"goalsLimit":1001,"climbsLimit":1001,"boardsLimit":1001,"bucketsLimit":1001,"bucketGoalsLimit":1000,"fileSizeLimit":10485760,"paywallVariant":"v1"}
+
+[host]
+
+[script]
+
+[mitm]
+hostname = timestripe.com
